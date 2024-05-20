@@ -1,13 +1,33 @@
-import Navbar from "./components/Navbar";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import Layout from "./layout/Layout";
 import Home from "./pages/Home";
+import List from "./pages/List";
+import Single from "./pages/Single";
 
 function App() {
-  return (
-    <div className="h-screen max-w-[640px] bg-red-200 sm:bg-red-200 sm:max-w-[640px] md:bg-blue-200 md:max-w-[768px] lg:bg-purple-200 lg:max-w-[1024px] xl:bg-white xl:max-w-[1280px] ml-auto mr-auto px-5">
-      <Navbar />
-      <Home />
-    </div>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/list",
+          element: <List />,
+        },
+        {
+          path: "/:id",
+          element: <Single />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;

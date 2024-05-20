@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className="w-full h-[100px] flex justify-between items-center">
       {/* LEFT */}
-      <div className="flex-[3] flex items-center gap-x-[50px]">
+      <div className="flex-[3] pr-0 lg:pr-[25px] flex items-center gap-x-[50px]">
         <a
           href="/"
           className="flex items-center gap-x-[10px] transition-all hover:scale-105"
