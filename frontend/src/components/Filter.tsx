@@ -87,7 +87,7 @@ const Filter = () => {
             placeholder="Any"
           />
         </div>
-        <button className="bg-black">
+        <button className="w-full flex justify-center items-center bg-[#fece51]">
           <img className="w-6 h-6" src="/search.png" alt="Search Icon" />
         </button>
       </div>
