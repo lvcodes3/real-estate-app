@@ -22,7 +22,7 @@ const Card = ({ item }: CardProps) => {
       {/* Image Container */}
       <Link className="flex-[2] h-[200px]" to={`/${item.id}`}>
         <img
-          className="w-full h-full object-cover rounded-lg"
+          className="w-full h-full object-cover rounded-lg transition-all hover:scale-105"
           src={item.img}
           alt={item.title}
         />
@@ -40,21 +40,25 @@ const Card = ({ item }: CardProps) => {
           $ {item.price}
         </p>
         <div className="flex justify-between gap-x-[10px]">
-          <div className="flex gap-x-[200px] text-sm">
+          <div className="flex gap-x-5 text-sm">
             <div className="p-[5px] flex items-center gap-x-[5px] bg-[#f5f5f5] rounded-md">
               <img className="w-4 h-4" src="/bed.png" alt="Bed Icon" />
-              <span>{item.bedroom} {item.bedroom > 1 ? "Bedrooms" : "Bedroom"}</span>
+              <span>
+                {item.bedroom} {item.bedroom > 1 ? "Bedrooms" : "Bedroom"}
+              </span>
             </div>
             <div className="p-[5px] flex items-center gap-x-[5px] bg-[#f5f5f5] rounded-md">
               <img className="w-4 h-4" src="/bath.png" alt="Bath Icon" />
-              <span>{item.bathroom} {item.bathroom > 1 ? "Bathrooms" : "Bathroom"}</span>
+              <span>
+                {item.bathroom} {item.bathroom > 1 ? "Bathrooms" : "Bathroom"}
+              </span>
             </div>
           </div>
           <div className="flex gap-5">
-            <div className="border-[1px] border-[#999] px-[5px] py-[2px] rounded-md cursor-pointer flex justify-center items-center hover:bg">
+            <div className="border-[1px] border-[#999] px-[5px] py-[2px] rounded-md cursor-pointer flex justify-center items-center hover:bg-[#D3D3D3]">
               <img className="w-4 h-4" src="/save.png" alt="Save Icon" />
             </div>
-            <div className="border-[1px] border-[#999] px-[5px] py-[2px] rounded-md cursor-pointer flex justify-center items-center">
+            <div className="border-[1px] border-[#999] px-[5px] py-[2px] rounded-md cursor-pointer flex justify-center items-center hover:bg-[#D3D3D3]">
               <img className="w-4 h-4" src="/chat.png" alt="Chat Icon" />
             </div>
           </div>

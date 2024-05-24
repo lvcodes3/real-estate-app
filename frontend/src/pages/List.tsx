@@ -8,14 +8,16 @@ const List = () => {
   return (
     <div className="h-full flex">
       {/* List Container */}
-      <div className="flex-[3] pr-0 lg:pr-[25px] flex flex-col gap-y-[50px] overflow-y-scroll">
-        <Filter />
-        {data.map((item) => (
-          <Card key={item.id} item={item} />
-        ))}
+      <div className="h-full flex-[3]">
+        <div className="h-full pr-0 lg:pr-[25px] pb-[50px] flex flex-col gap-y-[50px] overflow-y-scroll">
+          <Filter />
+          {data.map((item) => (
+            <Card key={item.id} item={item} />
+          ))}
+        </div>
       </div>
       {/* Map Container */}
-      <div className="flex-[2] bg-[#fcf5f3]">Map</div>
+      <div className="h-full flex-[2] bg-[#fcf5f3]">Map</div>
     </div>
   );
 };
